@@ -9,3 +9,31 @@
 <link rel="stylesheet" href="css/arindam-acf.min.css">
 <script src="js/jquery.arindam-acf.min.js"></script>
 ```
+
+## Dependency
+
+> **You need to add jquery.min.js file**
+
+## How to call it ?
+
+```shell
+// just create a div with id
+
+<div id="exampleAcf"></div>
+
+// and call and customize by below script
+<script>
+$(document).ready(function() {
+    $('#exampleAcf').arindamACF({
+      buttonText: 'Start Creating ACF',
+      headerTitle: 'Create Your Custom ACF',
+      saveChangesAction: function(acfJson) {
+        // your ajax call to save the acf json
+        console.log(acfJson);
+        $.fn.arindamACF.acfClose();
+      }
+    });
+});
+</script>
+```
+
