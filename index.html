@@ -17,6 +17,7 @@
   
 <div class="container mt-5">
   <div id="exampleAcf"></div>
+  <div id="acfJson"></div>
   <div style="margin-bottom: 30px;"></div>
 </div>
 
@@ -31,6 +32,7 @@
       headerTitle: 'Create Your Custom ACF',
       saveChangesAction: function(x) {
         console.log(x);
+        $('#acfJson').html(x);
         $.fn.arindamACF.acfClose();
       }
     });
